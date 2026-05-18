@@ -1,0 +1,27 @@
+# Python (backend)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Node (frontend + mobile)
+node_modules/
+dist/
+.expo/
+web-build/
+
+# ML artifacts
+backend/artifacts/*.joblib
+!backend/artifacts/.gitkeep
+
+# IDE / SO
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+
+
+frontend/
+mobile/
