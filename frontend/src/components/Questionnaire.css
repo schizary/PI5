@@ -1,0 +1,259 @@
+.questionnaire-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.questionnaire-hint {
+  color: var(--muted);
+  max-width: 36rem;
+  margin-top: 0.5rem;
+}
+
+.questionnaire-form {
+  max-width: 720px;
+}
+
+.form-fieldset {
+  border: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.form-fieldset legend {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.question-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.question-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.98rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.score-toggle,
+.chip-row,
+.chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  border: 2px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.chip:hover {
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+.chip-active {
+  background: var(--puzzle-blue);
+  border-color: var(--puzzle-blue);
+  color: #fff;
+}
+
+.chip-yes.chip-active {
+  background: var(--puzzle-green);
+  border-color: var(--puzzle-green);
+  color: #1a3d2a;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.92rem;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  font: inherit;
+  background: var(--surface);
+}
+
+.yesno-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.75rem 0;
+  border-top: 2px dashed var(--border);
+}
+
+.yesno-row .form-label {
+  margin: 0;
+}
+
+.form-error {
+  background: #ffe8e8;
+  border: 2px solid #ffb4b4;
+  color: #b54545;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.btn-submit {
+  width: 100%;
+  max-width: 360px;
+}
+
+.result-section {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.result-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.result-lead {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.result-score-card {
+  background: var(--surface);
+  border: 3px solid var(--puzzle-blue);
+  border-radius: 24px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.result-score-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.25rem;
+}
+
+.result-score-big {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.result-score-big span {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.result-score-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.5rem 0 1.25rem;
+  line-height: 1.4;
+}
+
+.result-bars {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.result-bar-row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.result-bar-track {
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.result-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.bar-no {
+  background: var(--puzzle-yellow);
+}
+
+.bar-yes {
+  background: var(--puzzle-green);
+}
+
+.result-message {
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.cta-professional {
+  background: linear-gradient(135deg, #fff8e1, #e8f8f0);
+  border: 3px solid var(--puzzle-yellow);
+  border-radius: 20px;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.cta-professional-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.result-footnote {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

@@ -1,0 +1,114 @@
+.analysis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.analysis-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  animation: analysis-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes analysis-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.analysis-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.analysis-status {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.analysis-ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.analysis-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.analysis-track {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 10;
+}
+
+.analysis-fill {
+  fill: none;
+  stroke: var(--puzzle-blue);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7;
+  stroke-dashoffset: calc(326.7 - (326.7 * var(--p, 0)) / 100);
+  transition: stroke-dashoffset 0.35s ease;
+}
+
+.analysis-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--puzzle-blue) 0deg,
+    var(--puzzle-yellow) 90deg,
+    var(--puzzle-red) 180deg,
+    var(--puzzle-green) 270deg,
+    var(--puzzle-blue) 360deg
+  );
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.analysis-percent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.analysis-number {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.analysis-suffix {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--muted);
+  align-self: flex-end;
+  margin-bottom: 0.35rem;
+}
+
+.analysis-caption {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 28rem;
+}
